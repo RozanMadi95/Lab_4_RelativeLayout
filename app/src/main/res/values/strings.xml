@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">RelativeLayoutApp</string>
+    <string name="et_fullname">Enter Full Name</string>
+    <string name="et_email_address">Enter Email Address</string>
+    <string name="et_phone">Enter Your Phone Here</string>
+    <string name="tv_gender">Gender:-</string>
+    <string name="male">Male</string>
+    <string name="Female">Female</string>
+    <string name="tv_department">Department:-</string>
+    <string name="cs_department">CS department</string>
+    <string name="it_department">IT department</string>
+    <string name="nt_department">NT department</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_clear">Clear</string>
+    <string name="done">Correctly Add</string>
+
+</resources>

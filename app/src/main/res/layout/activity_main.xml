@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="4dp"
+    android:background="@color/bg">
+
+    <!-- التطبيق يدعم اللغة العربية والانجليزية-->
+    <EditText
+        android:id="@+id/et_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:hint="@string/et_fullname"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_option"
+        android:textColorHint="@color/te_hint"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/et_email_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_fullname"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"
+        android:hint="@string/et_email_address"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_option"
+        android:textColorHint="@color/te_hint"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_email_address"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"
+        android:hint="@string/et_phone"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_option"
+        android:textColorHint="@color/te_hint"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_phone"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/tv_gender"
+        android:textAllCaps="true"
+        android:textColor="@color/combbox_titel"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rggtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:layout_toEndOf="@id/tv_gender"
+        android:layout_below="@id/et_phone">
+
+        <RadioButton
+            android:id="@+id/rbtn_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male"
+            android:backgroundTint="@color/text_option"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/rbtn_femal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/text_option"
+            android:text="@string/Female"
+            android:textSize="12sp"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_phone"
+        android:layout_alignBaseline="@id/tv_gender"
+        android:layout_gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toEndOf="@id/rggtn"
+        android:padding="4dp"
+        android:text="@string/tv_department"
+        android:textAllCaps="true"
+        android:textColor="@color/combbox_titel"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rggtdep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_phone"
+        android:layout_alignBaseline="@id/rggtn"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toEndOf="@id/tv_department">
+
+        <RadioButton
+            android:id="@+id/rbtn_cs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cs_department"
+            android:textColor="@color/text_option"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rbtn_it"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/it_department"
+            android:textColor="@color/text_option"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rbtn_nt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nt_department"
+            android:textColor="@color/text_option"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_add"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rggtdep"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:padding="10dp"
+        android:backgroundTint="@color/btn"
+        android:text="@string/btn_add"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_add"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/btn"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/btn_clear"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/done"
+        android:layout_width="333dp"
+        android:layout_height="69dp"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:text="@string/done"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#8DC886"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+
+
+</RelativeLayout>
